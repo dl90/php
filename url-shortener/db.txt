@@ -1,0 +1,57 @@
+foerign key goes on many side
+one to many: users => urls
+
+mysql -u root -p
+
+users
+-----
+id          | int
+pw          | varchar (255)
+email       | varchar (255)
+userName    | varchar (255)
+
+urls
+-----
+hash        | varchar(10)
+url         | varchar(255)
+id          | int
+user_id     | int
+created     | daytime
+impressions | int
+
+
+CREATE TABLE users (
+  id INTEGER AUTO_INCREMENT,
+  pw VARCHAR(255) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  email VARCHAR(255),
+  created DATETIME NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE urls (
+  id INTEGER AUTO_INCREMENT,
+  long_url VARCHAR (255) NOT NULL,
+  code VARCHAR (255) NOT NULL,
+  user_id INTEGER,
+  created DATETIME NOT NULL,
+  PRIMARY KEY(id),
+  FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+---------------------------------------------
+
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(255) UNIQUE,
+  password VARCHAR(255)
+);
+
+CREATE TABLE urls (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  long_url VARCHAR(255),
+  code VARCHAR(20),
+  created DATETIME DEFAULT NOW(),
+  user_id INTEGER,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE RESTRICT
+);

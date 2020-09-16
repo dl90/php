@@ -1,0 +1,14 @@
+body {
+  background-color: whitesmoke;
+  color: black;
+  margin-top: 1rem; }
+
+.content {
+  min-width: 500px; }
+
+.song-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.submit-button {
+  padding: 10px 20px; }

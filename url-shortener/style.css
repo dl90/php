@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  color: white;
+  margin-top: 3rem; }
+  body .btn {
+    animation-name: changeColors;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  body .list-group-item, body .list-group-item:hover {
+    z-index: auto; }
+  body .modal-content {
+    background-color: #191919; }
+  body .submit-url, body .urls {
+    background-color: #323232; }
+  body .URL {
+    color: lightblue; }
+  body .URL-long {
+    overflow: scroll; }
+  body .hidden {
+    overflow: hidden;
+    position: relative; }
+  body #copy {
+    position: absolute;
+    border: none;
+    height: 0px;
+    width: 0px; }
+
+@keyframes changeColors {
+  0% {
+    background-color: black; }
+  50% {
+    background-color: #240017; }
+  100% {
+    background-color: black; } }

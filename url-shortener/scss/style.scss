@@ -1,0 +1,56 @@
+// npx node-sass scss/style.scss style.css --watch
+
+$list_background:  rgb(50, 50, 50);
+$modal_background:  rgb(25, 25, 25);
+
+body {
+  background-color: black;
+  color: white;
+  margin-top: 3rem;
+
+  .btn{
+    animation-name: changeColors;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .list-group-item, .list-group-item:hover{ 
+    z-index: auto; 
+  }
+
+  .modal-content{
+    background-color: $modal_background;
+  }
+
+  .submit-url, .urls{
+    background-color: $list_background;
+  }
+
+  .URL {
+    color: lightblue;
+  }
+
+  .URL-long {
+    overflow: scroll;
+  }
+
+  .hidden{
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #copy {
+    position: absolute;
+    border: none;
+    height: 0px;
+    width: 0px;
+  }
+}
+
+@keyframes changeColors {
+  0%    { background-color: rgb(0, 0, 0);  }
+  50%   { background-color: rgb(36, 0, 23); }
+  100%  { background-color: rgb(0, 0, 0);  }
+}

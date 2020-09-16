@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test1": "phpunit --bootstrap ./functions/camel_case.php --testdox ./tests/camel_caseTest.php",
+    "test2": "phpunit --bootstrap ./functions/sum_largest_numbers.php --testdox ./tests/sum_largest_numbersTest.php",
+    "test3": "phpunit --bootstrap ./functions/sum_conditional_numbers.php --testdox ./tests/sum_conditional_numbersTest.php",
+    "test4": "phpunit --bootstrap ./functions/artist_with_longest_name.php --testdox ./tests/artist_with_longest_nameTest.php",
+    "test5": "phpunit --bootstrap ./functions/artist_genre.php --testdox ./tests/artist_genreTest.php",
+    "testAll": "phpunit --bootstrap functions/all.php --testdox tests/."
+  }
+}
+
